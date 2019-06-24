@@ -35,10 +35,10 @@ All the communication messages between an Editor and Test Platform have
 following structure:
 
 #### API Payload
-| Key         | Type   | Description                                            |
-|-------------|--------|--------------------------------------------------------|
-| MessageType | string | Type of message                                        |
-| Payload     | object | Payload for an operation input or output. Can be null. |
+| Key         | Type   | Description                               |
+|-------------|--------|-------------------------------------------|
+| MessageType | string | Type of message                           |
+| Payload     | object | Payload for an operation input or output. |
 
 #### Example
 ```json
@@ -77,16 +77,16 @@ communication if needed.
 A version request from Editor to Test Platform has following structure.
 
 ##### API Payload
-| Key         | Type   | Description     |
-|-------------|--------|-----------------|
-| MessageType | string | ProtocolVersion |
-| Payload     | object | null            |
+| Key         | Type   | Description      |
+|-------------|--------|------------------|
+| MessageType | string | ProtocolVersion  |
+| Payload     | object | Must not be null |
 
 ##### Example
 ```json
 {
     "MessageType": "ProtocolVersion",
-    "Payload": null
+    "Payload": 1
 }
 ```
 
@@ -103,7 +103,7 @@ A version response from Test Platform has following structure.
 ```json
 {
     "MessageType": "ProtocolVersion",
-    "Payload": null
+    "Payload": 1
 }
 ```
 

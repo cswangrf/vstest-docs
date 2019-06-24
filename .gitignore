@@ -11,3 +11,6 @@ _site
 
 # Visio
 *.~vsdx
+*.suo
+/.vs/slnx.sqlite
+/.vs/ProjectSettings.json
